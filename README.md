@@ -1,4 +1,4 @@
-# Dynamic Audio Explorer
+# ToneFlow: A Dynamic Audio Explorer
 
 Dynamic Audio Explorer is an interactive Swift project developed for my **Music Level 2 class final project**. This application is an explorative space for sound generation, utilizing the powerful capabilities of Swift's `AVAudioEngine`. It allows users to dynamically manipulate sound frequency, amplitude, and waveform type through intuitive gestures and a user-friendly interface. The project serves as an experimental platform to delve into real-time audio synthesis and control using Swift.
 
@@ -37,13 +37,13 @@ Dynamic Audio Explorer is an interactive Swift project developed for my **Music 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/DynamicAudioExplorer.git
+   git clone https://github.com/wesgrubbs/ToneFlow.git
    cd DynamicAudioExplorer
    ```
 
 2. Open the project in Xcode:
    ```bash
-   open DynamicAudioExplorer.xcodeproj
+   open ToneFlow.xcodeproj
    ```
 
 3. Build and run the project:
@@ -62,9 +62,9 @@ Dynamic Audio Explorer is an interactive Swift project developed for my **Music 
 ## Screenshots
 
 ### Main Interface
-| **Drag Gesture Crosshairs** | **Waveform Selection** |
-|-----------------------------|-------------------------|
-| ![Crosshairs Screenshot](screenshots/crosshairs.png) | ![Waveform Picker Screenshot](screenshots/waveform-picker.png) |
+| **Drag Gesture Crosshairs** |
+|-----------------------------|
+| ![Crosshairs Screenshot](screenshots/crosshairs.png) | 
 
 > *Screenshots illustrate the app's crosshair tracking and waveform selection functionality.*
 
@@ -84,7 +84,7 @@ This project was developed as a **final project for Music Level 2 class**, aimin
 - Add support for custom waveform shapes using mathematical functions.
 - Implement a spectrogram or visual audio analyzer.
 - Allow saving and exporting custom sound creations.
-- Expand the frequency and amplitude range for further experimentation.
+- Adding more fx capabilities, such as reverb, or equalizers
 
 ## License
 
@@ -101,5 +101,6 @@ Happy exploring, and enjoy creating dynamic audio landscapes! 🎶
 ### Author
 
 - **Wesley Grubbs**  
-  [GitHub Profile](https://github.com/wesgrubbs)  
+  [GitHub Profile](https://github.com/wesgrubbs)
+  [Website](https://www.wesleygrubbs.com)
   *Music Level 2 Student & Creative Technologist*
