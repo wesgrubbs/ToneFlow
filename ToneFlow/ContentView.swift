@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var audioEngineManager = DynamicAudioEngineManager()
+    @State private var xNorm: Float = 0
+    @State private var yNorm: Float = 0
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+    
     @State private var touchPoint: CGPoint
-
-    // Initialize with a default center point
+    
     init() {
         _touchPoint = State(initialValue: CGPoint(x: 0, y: 0))
     }
-
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -50,20 +55,34 @@ struct ContentView: View {
                 }
                 .position(touchPoint)
             }
-            // Set initial touch point to center of the screen when the view appears
             .onAppear {
                 touchPoint = CGPoint(
                     x: geometry.size.width / 2,
                     y: geometry.size.height / 2
                 )
             }
-            // Update touchPoint on tap or drag gestures
             .gesture(
                 DragGesture(minimumDistance: 0, coordinateSpace: .local)
                     .onChanged { value in
                         touchPoint = value.location
+                        xNorm = Float(touchPoint.x / screenWidth)
+                        yNorm = Float(touchPoint.y / screenHeight)
+                        audioEngineManager.startEngine(xVal: xNorm, yVal: yNorm)
+                    }
+                    .onEnded { _ in
+                        audioEngineManager.stopEngine()
                     }
             )
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    Picker("Waveform", selection: $audioEngineManager.waveformType) {
+                        ForEach(DynamicAudioEngineManager.WaveformType.allCases, id: \.self) { type in
+                            Text(type.rawValue).tag(type)
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                }
+            }
         }
         .background(Color.black)
         .edgesIgnoringSafeArea(.all)
