@@ -1,6 +1,6 @@
 # Dynamic Audio Explorer
 
-Dynamic Audio Explorer is an interactive Swift project developed for the **Music Level 2 class final project**. This application is an explorative space for sound generation, utilizing the powerful capabilities of Swift's `AVAudioEngine`. It allows users to dynamically manipulate sound frequency, amplitude, and waveform type through intuitive gestures and a user-friendly interface. The project serves as an experimental platform to delve into real-time audio synthesis and control using Swift.
+Dynamic Audio Explorer is an interactive Swift project developed for my **Music Level 2 class final project**. This application is an explorative space for sound generation, utilizing the powerful capabilities of Swift's `AVAudioEngine`. It allows users to dynamically manipulate sound frequency, amplitude, and waveform type through intuitive gestures and a user-friendly interface. The project serves as an experimental platform to delve into real-time audio synthesis and control using Swift.
 
 ## Features
 
