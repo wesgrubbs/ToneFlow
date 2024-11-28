@@ -64,9 +64,9 @@ Dynamic Audio Explorer is an interactive Swift project developed for my **Music 
 ### Main Interface
 | **Drag Gesture Crosshairs** |
 |-----------------------------|
-| ![Crosshairs Screenshot](screenshots/crosshairs.png) | 
+| ![Crosshairs Screenshot](https://github.com/user-attachments/assets/f6271c9b-5c34-41d0-9974-39b44a157a5d) | 
 
-> *Screenshots illustrate the app's crosshair tracking and waveform selection functionality.*
+> *Screenshot illustrates the app's crosshair tracking and waveform selection functionality.*
 
 ## Technology Stack
 
